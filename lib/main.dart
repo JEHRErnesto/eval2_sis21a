@@ -1,5 +1,7 @@
+import 'package:eval2_sis21a/views/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
 import 'pages/home.dart';
 
 void main() {
@@ -22,7 +24,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 0, 217, 255)),
         useMaterial3: true,
       ),
-      home: home(),
+      initialRoute: "/login",
+      routes: {
+        "/":(context) => home(),
+        "/login":(context) => const LoginPage(),
+      },
     );
   }
 }

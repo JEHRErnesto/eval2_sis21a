@@ -45,13 +45,32 @@ class _MyHomePageState extends State<Consulta> {
         builder: ((context, snapshot){
           if(snapshot.hasData){
             return ListView.builder(
-              itemCount: snapshot.data?.length,
-              itemBuilder: ((context, index){
-                return Text(snapshot.data?[index]["idproducto"] +"-"+
-                snapshot.data?[index]["nombre"] +"-"+ snapshot.data?[index]["precio"] +"-"+
-                snapshot.data?[index]["stock"]);
-              })
-              );
+  itemCount: snapshot.data?.length,
+  itemBuilder: (context, index) {
+    final producto = snapshot.data?[index];
+    return Card(
+      margin: EdgeInsets.all(8.0),
+      elevation: 4.0,
+      child: ListTile(
+        title: Text(
+          'ID: ${producto["idproducto"]}',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text('Nombre: ${producto["nombre"]}'),
+            Text('Precio: ${producto["precio"]}'),
+            Text('Stock: ${producto["stock"]}'),
+          ],
+        ),
+      ),
+    );
+  },
+);
           }else{
             return const Center(
               child: CircularProgressIndicator(),
