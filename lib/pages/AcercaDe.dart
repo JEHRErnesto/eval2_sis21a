@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class AcercaDe extends StatelessWidget{
+class AcercaDe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  SingleChildScrollView(
+    return SingleChildScrollView(
       child: Center(
         child: Column(
           children: [
@@ -11,34 +11,40 @@ class AcercaDe extends StatelessWidget{
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Image.asset('img/abraham.jpeg',
-                  height: 150,
-                  width: 150,),
-                  const Text('Abraham Alexander Ramirez',
-                  style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                  color: Colors.purple
-              ),
-              )
+                  Image.asset(
+                    'img/keira.jpg',
+                    height: 150,
+                    width: 150,
+                  ),
+                  const Text(
+                    'KEIRA YARETHZY BELTRAN FLORES',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: Colors.purple),
+                  )
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Image.asset('img/ernesto.jpeg',
-                  height: 150,
-                  width: 150,),
-                  const Text('José Ernesto Hernández Ramos',
-                  style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                  color: Colors.purple
-              ),
-              )
+                  Image.asset(
+                    'img/adelayda.jpg',
+                    height: 150,
+                    width: 150,
+                  ),
+                  const Text(
+                    'ADELAYDA DESIRE',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        color: Color.fromARGB(255, 47, 27, 136)),
+                  )
                 ],
               ),
             ),
@@ -46,6 +52,5 @@ class AcercaDe extends StatelessWidget{
         ),
       ),
     );
-
   }
 }
